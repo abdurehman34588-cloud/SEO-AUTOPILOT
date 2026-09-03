@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getAuditById } from '@/lib/db/storage';
 import { DEMO_AUDIT } from '@/lib/demo/demo-audit';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(
   req: NextRequest,
   { params }: { params: { id: string } }

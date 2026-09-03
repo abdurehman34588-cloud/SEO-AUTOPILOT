@@ -5,6 +5,8 @@ import { runFullAudit } from '@/lib/seo/audit-engine';
 import { saveAudit } from '@/lib/db/storage';
 import { DEMO_AUDIT } from '@/lib/demo/demo-audit';
 
+export const dynamic = 'force-dynamic';
+
 const requestSchema = z.object({
   url: z.string().min(1, 'Website URL is required'),
   maxPages: z.number().min(1).max(20).optional(),

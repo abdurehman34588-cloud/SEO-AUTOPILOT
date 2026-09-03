@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  experimental: {
+    serverComponentsExternalPackages: ['@prisma/client', 'cheerio'],
+  },
 };
 
 export default nextConfig;

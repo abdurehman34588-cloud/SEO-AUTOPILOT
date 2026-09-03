@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAuditHistory, deleteAudit } from '@/lib/db/storage';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const history = await getAuditHistory();
